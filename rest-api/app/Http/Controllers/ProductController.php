@@ -10,7 +10,7 @@ class ProductController extends Controller
         $product = new Product;
         $product->name = $req->input('name');
         $product->count = $req->input('count');
-        $product->photo=$req->file('file')->store('products');
+        $product->photo=$req->file('photo')->store('products');
         $product->save();
         return $product;
     }
@@ -29,5 +29,9 @@ class ProductController extends Controller
     }
     function search($key){
         return Product::where('name', 'Like', "%$key%")->get();
+    }
+    function getProduct($id){
+
+        return Product::find($id);
     }
 }

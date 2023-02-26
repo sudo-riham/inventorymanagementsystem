@@ -1,10 +1,9 @@
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import './App.css';
-import ListProduct from './components/ListProduct';
 import CreateProduct from './components/CreateProduct';
 import EditProduct from './components/EditProduct';
 import Header from './components/Header';
-
+import Product from './components/Products';
 
 function App() {
   return (
@@ -25,9 +24,9 @@ function App() {
         </ul>
       </nav>
       <Routes>
-        <Route index element={<ListProduct/>} />
+        <Route path="products" element={<Product/>} />
         <Route path="product/create" element={<CreateProduct />} />
-        <Route path="product/:id/edit" element={<EditProduct />} />
+        <Route path="/update/:id" element={<EditProduct />} />
       </Routes>
       </BrowserRouter>
     </div>

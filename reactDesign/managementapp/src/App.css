@@ -8,8 +8,20 @@ nav ul {
   background-color: #a90b0b;
   color: #fff;
   padding: 5px;
+  height:25px;
+  width:27px;
   border-radius: 5px;
   cursor: pointer;
+}
+.update{
+  background-color: green;
+  color: #fff;
+  padding: 5px;
+  height:25px;
+  width:27px;
+  border-radius: 5px;
+  cursor: pointer;
+
 }
 nav ul li{
   display: inline-block;

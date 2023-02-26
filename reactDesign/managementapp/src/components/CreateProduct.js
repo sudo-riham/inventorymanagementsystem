@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 
-export default function AddProduct() {
+function AddProduct() {
 
     const [name, setName] = useState("")
     const [file, setFile] = useState("");
@@ -49,3 +49,4 @@ export default function AddProduct() {
         </div>
     )
 }
+export default AddProduct;
